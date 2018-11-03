@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sourceFragment">
+
+    <fragment
+        android:id="@+id/sourceFragment"
+        android:name="com.example.anovi.kotlinfirstapp.modules.main.Source.SourceFragment"
+        android:label="SourceFragment">
+        <action
+            android:id="@+id/action_sourceFragment_to_pageFragment2"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_sourceFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.anovi.kotlinfirstapp.modules.main.Settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.anovi.kotlinfirstapp.modules.main.NewsDetail.NewsDetailFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/pageFragment2">
+        <fragment
+            android:id="@+id/pageFragment2"
+            android:name="com.example.anovi.kotlinfirstapp.modules.main.PagerNews.PageFragment"
+            android:label="PageFragment"
+            tools:layout="@layout/fragment_news">
+            <action
+                android:id="@+id/action_pageFragment2_to_newsFragment"
+                app:destination="@id/newsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/newsFragment"
+            android:name="com.example.anovi.kotlinfirstapp.modules.main.PagerNews.NewsFragment"
+            android:label="NewsFragment"
+            tools:layout="@layout/news_pager">
+            <action
+                android:id="@+id/toNewsDetailFragment"
+                app:destination="@id/newsDetailFragment" />
+        </fragment>
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </navigation>
+</navigation>

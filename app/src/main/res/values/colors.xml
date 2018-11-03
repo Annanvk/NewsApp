@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#060606</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#fcfbfb</color>
+    <color name="black">#0d0d0d</color>
+    <color name="toolbar_color_control_normal">#464444</color>
+    <color name="whiteforspinner">#8283c0</color>
+    <color name="grey_description">#c3bebe</color>
+    <color name="grey_name">#dbd6d6</color>
+    <color name="grey_cardview">#2b2a2a</color>
+    <color name="background">#222121</color>
+</resources>
